@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="registro.php" method="get">
+<div>
+    <label>Nome</label>
+    <input type="text"/>
+
+</div>
+<!-- action especifica o URL para qual os dados do forumulario serao enviados
+method http q usa pra enviar os dados do form
+os valores possiveis sao o get e o post
+get: os dados sao enviados na url, limite 2048 caracteres
+post: enviado no corpo da solicitação http, sem limite de tamanho -->
+
+<!-- atributo name -->
+<div>
+    <label>Idade:</label>
+    <input type="text" name="age"/>
+</div>
+
+<!-- atributo label -->
+<div>
+    <label for="age">Idade:</label>
+    <input type="text" name="age">  
+</div>
+
+    <!-- reset volta tudo pro padrao q tava- limpa tudo q preenchi -->
+<input type="reset" value="Limpar">
+
+ <!-- submit é um botão q é usado pra enviar os dados pra um servidor
+    exemplo: botao salvar ou enviar -->
+<input type="submit" value="Enviar">
+
+<!-- select é um menu suspenso: menu de navegação, seleção de produtos e idioma -->
+<div>
+    <label for="cidade">Selecione sua cidade</label>
+    <select name="cidade">
+<option value="São Paulo">São Paulo</option>
+<option value="Taboao da Serra">Taboão da Serra</option>
+<option value="Osasco">Osasco</option>
+    </select>
+</div>
+<!-- selected: mostra qual opção aparece primeiro se nao tiver nada selecionado -->
+<div>
+    <label for="selecao">Quem vai ganhar a proxima copa do mundo?</label>
+    <select name="times">
+        <option value="Argentina">Argentina</option>
+        <option value="Franca" selected>França</option>
+        <option value="Alemanha">Alemanha</option>
+        <option value="Brasil">Brasil</option>
+       
+    </select>
+</div>
+<!-- seleção de varios select -->
+
+<div>
+    <label for="acessorios">Selecione os acessórios do seu computador</label>
+    <select name="acessorios" multiple>
+        <option value="mouse">Mouse</option>
+        <option value="teclado">Teclado</option>
+        <option value="fone-de-ouvido">Fone de ouvido</option>
+        <option value="webcam">Webcam</option>
+
+    </select>
+
+</div>
+
+<!-- textarea é usada para criar uma area de texto de varias linhas -->
+
+<div>
+    <label for="feedback">Descreva o seu feedback sobre o nosso site:</label>
+    <textarea name="feedback"></textarea>
+
+</div>
+
+<!-- fieldset- agrupa elementos relacionados em um form
+    a tag legend é usada para fornecer um titulo pro grupo de elemento -->
+<div>
+    <fieldset>
+        <legend>Insira o seu endereço:</legend>
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua">
+        <label for="bairro">Bairro</label>
+        <input type="text" name="bairro">
+    </fieldset>
+</div>
+
+<!-- datalist- lista de opções -->
+<div>
+    <label for="livro">Selecione seu livro</label>
+    <input type="text" list="livros" name=" livro">
+
+    <datalist id="livros">
+        <option value="Crepúsculo"></option>
+        <option value="Harry Potter e a Pedra Filosofal"></option>
+        <option value="A Hospedeira"></option>
+        <option value="Harry Potter e o Cálice de Fogo"></option>
+    </datalist>
+</div>
+
+<!-- password -->
+<div>
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha">
+</div>
+
+<!-- input radio button -seleciona uma unica opção -->
+<div>
+    <label for="genero">Qual o seu gênero?</label>
+    <div class="radio">
+        <input type="radio" value="Feminino" name="genero">
+        <label for="Feminino">Feminino</label>
+    </div>
+    <div class="radio">
+        <input type="radio" value="Masculino" name="genero">
+        <label for="Masculino">Masculino</label>
+    </div>
+    <div class="radio">
+        <input type="radio" value="naobinario" name="genero">
+        <label for="naobinario">Não Binário</label>
+    </div>
+</div>
+
+<!-- input checkbox -->
+<div>
+    <label for="linguasestrangeiras">Quais linguas que você pretende estudar:</label>
+</div>
+<div class="radio">
+    <input type="checkbox" name="linguasestrangeiras" value="ingles">
+    <label for="ingles">Inglês</label>
+</div>
+<div class="radio">
+    <input type="checkbox" name="linguasestrangeiras" value="espanhol">
+    <label for="espanhol">Espanhol</label>
+</div>
+<div class="radio">
+    <input type="checkbox" name="linguasestrangeiras" value="alemao">
+    <label for="alemao">Alemão</label>
+</div>
+
+<!-- input data -->
+<div>
+    <label for="datanascimento">Data de nascimento</label>
+    <input type="date" name="datanascimento">
+</div>
+<!-- input file -->
+<div>
+    <label for="arquivo">Insira o seu currículo em PDF</label>
+    <input type="file" name="arquivo">
+</div>
+
+<!-- input number -->
+<div>
+    <label for="certificados">Quantos certificados você possui?</label>
+    <input type="number" name="certificados">
+</div>
+
+<!-- input e-mail -->
+<div>
+    <label for="emailinserido">Insira seu e-mail</label>
+    <input type="email" name="emailinserido">
+</div>
+
+<!-- atributo value: atribuir um valor como se o usuario ja estivesse preenchido a info -->
+<div>
+    <label for="confirmaraula">Você assistiu a video aula de treinamento da empresa?</label>
+    <input type="text" value="Confirmo que assisti">
+</div>
+
+<!-- Atributo disabled:   -->
+<div>
+    <p>Informe seu RG:</p>
+    <input type="text" value="Não precisa preencher esse campo" disabled>
+</div>
+<!-- placeholder: texto dentro da label ate o usuario inserir algo -->
+<div>
+    <label for="pesquisa">Como achou o nosso site?</label>
+    <input type="text" name="pesquisa" placeholder="No google ou Instagram">
+
+</div>
+<!-- required: campo obrigatório -->
+<div>
+    <label for="sobrenome">Digite o seu sobrenome:</label>
+    <input type="text"name="sobrenome" placehold="Sobrenome completo" required>
+
+</div>
+
+    </form>
+
+
+</body>
+</html>
